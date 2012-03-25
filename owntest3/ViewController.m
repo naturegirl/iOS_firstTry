@@ -1,7 +1,10 @@
 #import "ViewController.h"
+#import "Question.h"
 #import <stdlib.h>
 
 @implementation ViewController
+@synthesize numQuestions;
+@synthesize rightwrong;
 @synthesize imageView;
 @synthesize answer4;
 @synthesize answer3;
@@ -22,6 +25,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    question = [[Question alloc] init];
+    
 }
 
 - (void)viewDidUnload
@@ -33,6 +38,8 @@
     [self setAnswer3:nil];
     [self setAnswer4:nil];
     [self setImageView:nil];
+    [self setNumQuestions:nil];
+    [self setRightwrong:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -91,28 +98,34 @@
 - (IBAction)clickAnswer1:(id)sender {
     [self handleAnswerClick:0];
     [self newQuestion];
+    [self updateLabels];
 }
 - (IBAction)clickAnswer2:(id)sender {
     [self handleAnswerClick:1];
     [self newQuestion];
+    [self updateLabels];    
 }
 - (IBAction)clickAnswer3:(id)sender {
     [self handleAnswerClick:2];
     [self newQuestion];
+    [self updateLabels];
 }
 - (IBAction)clickAnswer4:(id)sender {
     [self handleAnswerClick:3];
     [self newQuestion];
+    [self updateLabels];
 }
 // handles the click on one of the four answer buttons
 - (void)handleAnswerClick:(int)buttonNumber {
     if (posCorrect == buttonNumber) {
         self.label2.text = @"correct!";
         [self showImage:1];
+        [question right];
     }
     else {
         self.label2.text = @"wrong...";
         [self showImage:2];
+        [question wrong];
     }
 }
 
@@ -131,13 +144,13 @@
     self.label.text = text;
     
     UIButton* b[4];
+    [b[0] setSelected:true];
     b[0] = self.answer1;
     b[1] = self.answer2;
     b[2] = self.answer3;
     b[3] = self.answer4;
     for (int i = 0; i < 4; ++i)
         [b[i] setTitle:[NSString stringWithFormat:@"%d", answers[i]] forState:UIControlStateNormal];
-    
 }
 // show image, num specifies which image
 // for now 1 -> happy, 2 -> sad
@@ -154,11 +167,13 @@
         default:
             break;
     }
-    [self.imageView setImage:img];    
+    [self.imageView setImage:img];  
 }
-// play sound, num 1 -> right, 2 -> wrong
-- (void)playSound:(int)num {
-    
+// update labels for number of questions and right wrong answers
+- (void)updateLabels {
+    self.numQuestions.text = [question countLabel];
+    self.rightwrong.text = [question rightwrongLabel];
 }
+
 
 @end

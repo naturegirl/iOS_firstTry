@@ -91,6 +91,20 @@
                                 <rect key="frame" x="57" y="223" width="206" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="mCd-Ws-57x">
+                                <rect key="frame" x="40" y="49" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="dia-yh-8yJ">
+                                <rect key="frame" x="226" y="49" width="54" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -102,30 +116,14 @@
                         <outlet property="imageView" destination="bLQ-cv-f1J" id="wml-HA-PnK"/>
                         <outlet property="label" destination="aAA-H6-u3f" id="d6j-v0-V5W"/>
                         <outlet property="label2" destination="rov-4L-lq8" id="gcy-di-Qmu"/>
+                        <outlet property="numQuestions" destination="mCd-Ws-57x" id="6oj-zW-eP8"/>
+                        <outlet property="rightwrong" destination="dia-yh-8yJ" id="mg7-rN-s56"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-385" y="57"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="clickAnswer1:"/>
-                <relationship kind="action" name="clickAnswer2:"/>
-                <relationship kind="action" name="clickAnswer3:"/>
-                <relationship kind="action" name="clickAnswer4:"/>
-                <relationship kind="outlet" name="answer1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answer4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="label2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

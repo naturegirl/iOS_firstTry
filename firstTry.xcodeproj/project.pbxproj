@@ -20,6 +20,7 @@
 		BAAEA9071515E45C007CBF7D /* smiley_happy.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEA9021515E45C007CBF7D /* smiley_happy.png */; };
 		BAAEA9081515E45C007CBF7D /* smiley_sad.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEA9031515E45C007CBF7D /* smiley_sad.png */; };
 		BAAEA9091515E45C007CBF7D /* wow.wav in Resources */ = {isa = PBXBuildFile; fileRef = BAAEA9041515E45C007CBF7D /* wow.wav */; };
+		BAAF6AD8151ECC3A0019CAF1 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAF6AD7151ECC3A0019CAF1 /* Question.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		BAAEA9021515E45C007CBF7D /* smiley_happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley_happy.png; sourceTree = "<group>"; };
 		BAAEA9031515E45C007CBF7D /* smiley_sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley_sad.png; sourceTree = "<group>"; };
 		BAAEA9041515E45C007CBF7D /* wow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wow.wav; sourceTree = "<group>"; };
+		BAAF6AD6151ECC3A0019CAF1 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		BAAF6AD7151ECC3A0019CAF1 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				B9C13E32150C955200878C31 /* ViewController.h */,
 				B9C13E33150C955200878C31 /* ViewController.m */,
 				B9C13E24150C955200878C31 /* Supporting Files */,
+				BAAF6AD6151ECC3A0019CAF1 /* Question.h */,
+				BAAF6AD7151ECC3A0019CAF1 /* Question.m */,
 			);
 			name = firstTry;
 			path = owntest3;
@@ -149,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = kittypad;
+				ORGANIZATIONNAME = "Tsinghua University";
 			};
 			buildConfigurationList = B9C13E13150C955200878C31 /* Build configuration list for PBXProject "firstTry" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -193,6 +198,7 @@
 				B9C13E2A150C955200878C31 /* main.m in Sources */,
 				B9C13E2E150C955200878C31 /* AppDelegate.m in Sources */,
 				B9C13E34150C955200878C31 /* ViewController.m in Sources */,
+				BAAF6AD8151ECC3A0019CAF1 /* Question.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
