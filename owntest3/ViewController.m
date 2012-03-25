@@ -3,6 +3,7 @@
 #import <stdlib.h>
 
 @implementation ViewController
+@synthesize label2;
 @synthesize numQuestions;
 @synthesize rightwrong;
 @synthesize imageView;
@@ -10,7 +11,6 @@
 @synthesize answer3;
 @synthesize answer2;
 @synthesize answer1;
-@synthesize label2;
 @synthesize label;
 
 - (void)didReceiveMemoryWarning
@@ -26,13 +26,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     question = [[Question alloc] init];
-    
+    [self newQuestion]; // first question
+    [self updateLabels];
+    self.label2.text = nil;
 }
 
 - (void)viewDidUnload
 {
     [self setLabel:nil];
-    [self setLabel2:nil];
     [self setAnswer1:nil];
     [self setAnswer2:nil];
     [self setAnswer3:nil];
@@ -40,6 +41,7 @@
     [self setImageView:nil];
     [self setNumQuestions:nil];
     [self setRightwrong:nil];
+    [self setLabel2:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

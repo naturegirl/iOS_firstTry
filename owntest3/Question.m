@@ -13,7 +13,7 @@
 {
     self = [super init];
     if (self) {
-        countQuestions = 0;
+        countQuestions = -1;    // first one displays 0
         maxQuestions = 20;  // Todo: constant declaration?
         right = wrong = 0;
     }
@@ -39,7 +39,7 @@
 }
 
 - (NSString *) rightwrongLabel {
-    return [NSString stringWithFormat:@"wrong: %d", wrong];
+    return [NSString stringWithFormat:@"Points: %d", right];
 }
 
 - (void) right {

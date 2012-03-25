@@ -21,6 +21,7 @@
 		BAAEA9081515E45C007CBF7D /* smiley_sad.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEA9031515E45C007CBF7D /* smiley_sad.png */; };
 		BAAEA9091515E45C007CBF7D /* wow.wav in Resources */ = {isa = PBXBuildFile; fileRef = BAAEA9041515E45C007CBF7D /* wow.wav */; };
 		BAAF6AD8151ECC3A0019CAF1 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAF6AD7151ECC3A0019CAF1 /* Question.m */; };
+		BAD14921151F040000451980 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BAD14920151F03FF00451980 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		BAAEA9041515E45C007CBF7D /* wow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wow.wav; sourceTree = "<group>"; };
 		BAAF6AD6151ECC3A0019CAF1 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		BAAF6AD7151ECC3A0019CAF1 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		BAD14920151F03FF00451980 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		BAD14925151F046B00451980 /* iconbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconbig.png; path = ../iconbig.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		BAAEA8FF1515E45C007CBF7D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				BAD14925151F046B00451980 /* iconbig.png */,
+				BAD14920151F03FF00451980 /* icon.png */,
 				BAAEA9001515E45C007CBF7D /* click_no.wav */,
 				BAAEA9011515E45C007CBF7D /* click_yes.wav */,
 				BAAEA9021515E45C007CBF7D /* smiley_happy.png */,
@@ -185,6 +190,7 @@
 				BAAEA9071515E45C007CBF7D /* smiley_happy.png in Resources */,
 				BAAEA9081515E45C007CBF7D /* smiley_sad.png in Resources */,
 				BAAEA9091515E45C007CBF7D /* wow.wav in Resources */,
+				BAD14921151F040000451980 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +236,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -245,6 +252,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -255,6 +263,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -264,6 +273,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

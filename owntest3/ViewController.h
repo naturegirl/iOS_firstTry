@@ -16,10 +16,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer3;
 @property (weak, nonatomic) IBOutlet UIButton *answer2;
 @property (weak, nonatomic) IBOutlet UIButton *answer1;
-@property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UILabel *numQuestions; // display number of questions
 @property (weak, nonatomic) IBOutlet UILabel *rightwrong;   // display right and wrong answer count
+@property (weak, nonatomic) IBOutlet UILabel *label2;
 
 // my helper functions
 - (int)getWrongAnswer:(int)answer;
