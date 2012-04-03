@@ -106,7 +106,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.88586956521739135" green="0.58199565616206117" blue="0.88457082249557983" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="answer1" destination="OYw-eG-3Dt" id="yFK-xi-y9g"/>

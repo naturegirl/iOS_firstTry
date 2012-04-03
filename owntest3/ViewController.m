@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor purpleColor];
     question = [[Question alloc] init];
     [self newQuestion]; // first question
     [self updateLabels];
@@ -101,24 +102,35 @@
 
 - (IBAction)clickAnswer1:(id)sender {
     [self handleAnswerClick:0];
-    [self newQuestion];
     [self updateLabels];
-    [self showResult:30];
+    if ([question isSetFinished])
+        [self showResult:[question getScore]];
+    else
+        [self newQuestion];
 }
 - (IBAction)clickAnswer2:(id)sender {
     [self handleAnswerClick:1];
-    [self newQuestion];
-    [self updateLabels];    
+    [self updateLabels];
+    if ([question isSetFinished])
+        [self showResult:[question getScore]];
+    else
+        [self newQuestion];
 }
 - (IBAction)clickAnswer3:(id)sender {
     [self handleAnswerClick:2];
-    [self newQuestion];
     [self updateLabels];
+    if ([question isSetFinished])
+        [self showResult:[question getScore]];
+    else
+        [self newQuestion];
 }
 - (IBAction)clickAnswer4:(id)sender {
     [self handleAnswerClick:3];
-    [self newQuestion];
     [self updateLabels];
+    if ([question isSetFinished])
+        [self showResult:[question getScore]];
+    else
+        [self newQuestion];
 }
 // handles the click on one of the four answer buttons
 - (void)handleAnswerClick:(int)buttonNumber {
@@ -172,7 +184,7 @@
         default:
             break;
     }
-    [self.imageView setImage:img];  
+    [self.imageView setImage:img];
 }
 // update labels for number of questions and right wrong answers
 - (void)updateLabels {

@@ -14,23 +14,13 @@
     self = [super init];
     if (self) {
         countQuestions = -1;    // first one displays 0
-        maxQuestions = 20;  // Todo: constant declaration?
+        maxQuestions = 10;  // Todo: constant declaration?
         right = wrong = 0;
     }
     return self;
 }
 - (void) reset {
     right = wrong = countQuestions = 0;
-}
-
-
-+ (void) test 
-{
-    NSLog(@"hello world?");
-}
-
-- (void) blabla {
-    NSLog(@"bla bla?");
 }
 
 - (NSString *) countLabel {
@@ -47,5 +37,15 @@
 }
 - (void) wrong {
     wrong++;
+}
+
+- (Boolean) isSetFinished
+{
+    return (countQuestions == maxQuestions) ? true : false;
+}
+
+- (int) getScore
+{
+    return right;
 }
 @end
