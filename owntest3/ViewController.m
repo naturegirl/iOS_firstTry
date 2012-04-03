@@ -2,6 +2,8 @@
 #import "Question.h"
 #import <stdlib.h>
 
+#import "VC_Result.h"
+
 @implementation ViewController
 @synthesize label2;
 @synthesize numQuestions;
@@ -101,6 +103,7 @@
     [self handleAnswerClick:0];
     [self newQuestion];
     [self updateLabels];
+    [self showResult:30];
 }
 - (IBAction)clickAnswer2:(id)sender {
     [self handleAnswerClick:1];
@@ -177,5 +180,14 @@
     self.rightwrong.text = [question rightwrongLabel];
 }
 
+// show result in new view
+- (void)showResult:(int)score
+{
+    VC_Result *vc_result = [[VC_Result alloc] initWithNibName:@"VC_Result" bundle:nil];
+    vc_result.score.text = @"100";
+    [self.view addSubview: vc_result.view];
+    // set the score
+    vc_result.score.text = [NSString stringWithFormat:@"%d", score];
+}
 
 @end

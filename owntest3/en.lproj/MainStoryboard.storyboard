@@ -84,8 +84,8 @@
                                 <rect key="frame" x="57" y="223" width="206" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="test" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="mCd-Ws-57x">
-                                <rect key="frame" x="40" y="54" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="test" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" minimumFontSize="10" id="mCd-Ws-57x">
+                                <rect key="frame" x="40" y="54" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -124,6 +124,26 @@
             <point key="canvasLocation" x="-385" y="57"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clickAnswer1:"/>
+                <relationship kind="action" name="clickAnswer2:"/>
+                <relationship kind="action" name="clickAnswer3:"/>
+                <relationship kind="action" name="clickAnswer4:"/>
+                <relationship kind="outlet" name="answer1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answer4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numQuestions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rightwrong" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

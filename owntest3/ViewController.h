@@ -28,4 +28,5 @@
 - (void)newQuestion;
 - (void)showImage:(int)num;
 - (void)updateLabels;
+- (void)showResult:(int)score; // show result in new view with score
 @end

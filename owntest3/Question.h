@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Question : NSObject {
-    int countQuestions;
+    int countQuestions;     // number of questions answered so far
     int maxQuestions;     // numbers of questions per each set
-    int right;
-    int wrong;
+    int right;          // number of right questions
+    int wrong;          // number of wrong questions
 }
 - (Question *) init;
 - (void) reset;     // called after a set is finished
