@@ -196,8 +196,7 @@
 - (void)showResult:(int)score
 {
     VC_Result *vc_result = [[VC_Result alloc] initWithNibName:@"VC_Result" bundle:nil];
-    vc_result.score.text = @"100";
-    [self.view addSubview: vc_result.view];
+    [self presentModalViewController:vc_result animated:true];
     // set the score
     vc_result.score.text = [NSString stringWithFormat:@"%d", score];
 }

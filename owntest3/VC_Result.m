@@ -9,6 +9,7 @@
 #import "VC_Result.h"
 
 @implementation VC_Result
+@synthesize button;
 @synthesize score;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,6 +41,7 @@
 - (void)viewDidUnload
 {
     [self setScore:nil];
+    [self setButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -51,4 +53,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)onClick:(id)sender
+{
+    [self dismissModalViewControllerAnimated:true];
+}
 @end
