@@ -28,10 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor purpleColor];
-    question = [[Question alloc] init];
-    [self newQuestion]; // first question
-    [self updateLabels];
-    self.label2.text = nil;
+    question = [[Question alloc] init];     // create variable once. Initialization is done in viewDidAppear()
 }
 
 - (void)viewDidUnload
@@ -53,6 +50,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    NSLog(@"view did appear!");
+    [question reset];
+    [self newQuestion];
+    [self updateLabels];
+    self.label2.text = nil; // "right, wrong" answer label
 }
 
 - (void)viewDidAppear:(BOOL)animated

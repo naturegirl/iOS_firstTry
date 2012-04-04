@@ -20,7 +20,8 @@
     return self;
 }
 - (void) reset {
-    right = wrong = countQuestions = 0;
+    right = wrong = 0;
+    countQuestions = -1;    // this way first one displays 0
 }
 
 - (NSString *) countLabel {
